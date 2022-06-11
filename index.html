@@ -41,15 +41,18 @@ function startCount() {
 }
 function spawnPoke() {
   
-  const topa = Math.random() * (300 - 1) + 1;
-  const lefta = Math.random() * (1000 - 1) + 1;
+  var width = "200px";
+  var height = "400px"; 
+  var top = Math.random() * (300 - 1) + 1;
+  var left = Math.random() * (1000 - 1) + 1;
+  var params = 'width='+width+', height='+height;
   params += ', resizable=0';
+  params += ', menubar=1';
   params += ', scrollbars=0';
-  params += ', toolbar=0';
   var win = null;
   if ((win == null) || (win.closed == true)) {
     if (document.body.contains(document.getElementById("iframe")) == false) {
-      win = window.open("",'a', "menubar=1,resizable=0,width=200px,height=400px,top=topa,left=lefta,scrollbars=0");
+      win = window.open("",'a', params);
       win.document.body.style.margin = "0";
       win.document.body.style.height = "100vh";
       var iframe = win.document.createElement("iframe");
