@@ -41,8 +41,8 @@ function startCount() {
 }
 function spawnPoke() {
 
-  var width  = 400px;
-  var height = 500px;
+  var width  = '400px';
+  var height = '500px';
   var left = Math.random() * (1000 - 1) + 1;
   var top = Math.random() * (300 - 1) + 1;
   var params = 'width='+width+', height='+height;
@@ -57,7 +57,7 @@ function spawnPoke() {
     win.document.body.style.height = "100vh";
     var iframe = win.document.createElement("iframe");
     var code = win.document.createElement('script');
-    code.innerHTML = "window.onscroll = () => { window.scroll(0, 0); };";
+    code.innerHTML = "window.onscroll = () => { window.scroll(0, 0)}";
     iframe.style.border = "none";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
