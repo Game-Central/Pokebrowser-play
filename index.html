@@ -40,20 +40,16 @@ function startCount() {
  }, randomNumber(1000, 6000));
 }
 function spawnPoke() {
-
-  var width  = '100px';
-  var height = '200px';
-  var left = Math.random() * (1000 - 1) + 1;
-  var top = Math.random() * (300 - 1) + 1;
-  var params = 'width='+width+', height='+height;
-  params += ', top='+top+', left='+left;
+  
+  var top1 = Math.random() * (300 - 1) + 1;
+  var left1 = Math.random() * (1000 - 1) + 1;
   params += ', resizable=0';
   params += ', scrollbars=0';
   params += ', toolbar=0';
   var win = null;
   if ((win == null) || (win.closed == true)) {
     if (document.body.contains(document.getElementById("iframe")) == false) {
-      win = window.open("",'a', "menubar=1,resizable=0,width=100px,height=200px,top=Math.random() * (300 - 1) + 1,left=Math.random() * (1000 - 1) + 1,scrollbars=0");
+      win = window.open("",'a', "menubar=1,resizable=0,width=200px,height=400px,top=top1,left=left1,scrollbars=0");
       win.document.body.style.margin = "0";
       win.document.body.style.height = "100vh";
       var iframe = win.document.createElement("iframe");
