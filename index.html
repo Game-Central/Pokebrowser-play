@@ -51,11 +51,12 @@ function startCount() {
 }
 function spawnPoke() {
   
-  var width = "200px";
-  var height = "400px"; 
-  var top = Math.random() * (300 - 1) + 1;
+  var width  = '350px';
+  var height = '400px';
   var left = Math.random() * (1000 - 1) + 1;
+  var top = Math.random() * (300 - 1) + 1;
   var params = 'width='+width+', height='+height;
+  params += ', top='+top+', left='+left;
   params += ', resizable=0';
   params += ', menubar=1';
   params += ', scrollbars=0';
