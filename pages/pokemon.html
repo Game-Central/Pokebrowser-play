@@ -3,9 +3,14 @@
   <head>
   </head>
   <body>
+    <img width="200" height="200px" id="pokemonImg">
     Pokemon
     <script>
       window.onscroll = function() {window.scroll(0, 0)};
+      
+      var pokemon = (new window.URL(window.location.href)).searchParams.get('pokemon');
+      var iframe = document.getElementByIframe('pokemonImg');
+      img.src = 'https://play.pokebrowser.gq/images/pokemon/' + pokemon;
     </script>
   </body>
 </html>
