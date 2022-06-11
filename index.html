@@ -36,10 +36,10 @@ function blocked() {
 var spawnCountdown = null;
 function startCount() {
   const interval = setInterval(function() {
-    spawnPoke('pages/pokemon.html')
+    spawnPoke()
  }, randomNumber(1000, 6000));
 }
-function spawnPoke(loc) {
+function spawnPoke() {
 
   var width  = 400;
   var height = 500;
@@ -53,16 +53,19 @@ function spawnPoke(loc) {
   var win = null;
   if ((win == null) || (win.closed == true)) {
     win = window.open("",'a', params);
+    win.document.body.style.margin = "0";
+    win.document.body.style.height = "100vh";
+    var iframe = win.document.createElement("iframe");
+    var code = win.document.createElement('script');
+    code.innerHTML = "window.onscroll = () => { window.scroll(0, 0); };"
+    iframe.style.border = "none";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.margin = "0";
+    iframe.src = "/pages/pokemon.html";
+    win.document.body.appendChild(iframe);
+    win.document.body.appendChild(code);
   };
-  win.document.body.style.margin = "0";
-  win.document.body.style.height = "100vh";
-  var iframe = win.document.createElement("iframe");
-  iframe.style.border = "none";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.margin = "0";
-  iframe.src = loc;
-  win.document.body.appendChild(iframe);
   a.focus()
 }
 </script>
