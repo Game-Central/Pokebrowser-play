@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokebrowser</title>
+    <link rel="icon" href="images/icon.png">
+  </head>
+  <body onload="onload()">
+    <button onclick="alert(randomNumber(1, 5))">Random Number</button>
+    <button onclick="spawnPoke()">Spawn</button>
+
+<script>
+function onload() {
+  chechPopUps();
+  startCount()
+}
+function randomNumber(minimum, maximum){
+    return Math.round(Math.random() * (maximum - minimum) + minimum)
+}
+
+
+function chechPopUps() {
+    var popUpsBlock = "yes";
+    var popUpTest = null;
+    popUpTest = window.open('about:blank','','height=0px,width=0px');
+    if (popUpTest != null) {
+      popUpTest.close();
+      var popUpsBlock = "no"
+    } else {blocked()};
+}
+function blocked() {
+  var popUpsBlock = "yes";
+  alert("Popup Blocker is enabled! Please add this site to your exception list. Then Reload The Page")};
+  document.getElementById('code').remove()
+</script>
+<script id="code">
+var spawnCountdown = null;
+function startCount() {
+  const interval = setInterval(function() {
+    spawnPoke('pages/pokemon.html')
+ }, randomNumber(1000, 6000));
+}
+function spawnPoke(loc) {
+
+  var width  = 400;
+  var height = 500;
+  var left = Math.random() * (1000 - 1) + 1;
+  var top = Math.random() * (300 - 1) + 1;
+  var params = 'width='+width+', height='+height;
+  params += ', top='+top+', left='+left;
+  params += ', resizable=no';
+  params += ', scrollbars=no';
+  params += ', toolbar=no';
+  var win = null;
+  if ((win == null) || (win.closed == true)) {
+    win = window.open("",'a', params);
+  };
+  win.document.body.style.margin = "0";
+  win.document.body.style.height = "100vh";
+  var iframe = win.document.createElement("iframe");
+  iframe.style.border = "none";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.margin = "0";
+  iframe.src = loc;
+  win.document.body.appendChild(iframe);
+  a.focus()
+}
+</script>
+  </body>
+</html>
