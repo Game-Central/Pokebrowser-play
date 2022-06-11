@@ -69,6 +69,7 @@ function spawnPoke() {
       var iframe = win.document.createElement("iframe");
       var code = win.document.createElement('script');
       code.innerHTML = "window.onscroll = () => { window.scroll(0, 0)}";
+      iframe.id = "iframe";
       iframe.style.border = "none";
       iframe.style.width = "100%";
       iframe.style.height = "100%";
