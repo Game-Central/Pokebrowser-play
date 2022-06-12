@@ -76,8 +76,12 @@ function spawnPoke() {
       iframe.src = "https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9);
       win.document.body.appendChild(iframe);
       win.document.body.appendChild(code);
-  };
-  a.focus()
+  } else {
+    win.focus();
+    var iframe = document.getElementById("iframe");
+    iframe.src = "https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9);
+    };
+  win.focus();
 }
 </script>
   </body>
