@@ -62,7 +62,7 @@ function spawnPoke() {
   params += ', scrollbars=0';
   var win = null;
   if ((win == null) || (win.closed == true)) {
-    if (document.body.contains(document.getElementById("iframe")) == false) {
+    if (a.document.body.contains(document.getElementById("iframe")) == false) {
       win = window.open("",'a', params);
       win.document.body.style.margin = "0";
       win.document.body.style.height = "100vh";
