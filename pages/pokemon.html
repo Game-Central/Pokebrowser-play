@@ -76,12 +76,12 @@ text-align: center;
                     "Enter Pokemon Name Below To Catch. \nWarning: The Name Must Be Perfectly Spelt And All Lower Case");
         if (catchAnswer == pokemonName) {
           alert('Pokemon Caught');
-          close();
+          parent.win.close();
         } else {alert('Incorrect');};
       }
       function Flee() {
         alert('You Fled Successfully');
-        close();
+        parent.win.close();
       }
     </script>
   </div>
