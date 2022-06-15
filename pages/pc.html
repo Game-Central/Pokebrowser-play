@@ -10,13 +10,14 @@
 <button onclick="localStorage.removeItem(pokemonList)">Clear Pokemon</button>
 <div class="grid-container">
   <div class="grid-item"><a id="1count"></a></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
+  <div class="grid-item"><a id="2count"></a></div>
+  <div class="grid-item"><a id="3count"></a></div>
+  <div class="grid-item"><a id="4count"></a></div>
+  <div class="grid-item"><a id="5count"></a></div>
+  <div class="grid-item"><a id="6count"></a></div>
+  <div class="grid-item"><a id="7count"></a></div>
+  <div class="grid-item"><a id="8count"></a></div>
+  <div class="grid-item"><a id="9count"></a></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
@@ -44,6 +45,14 @@
       var pokemonList = localStorage.getItem("pokemonList");
 
       document.getElementById('1count').innerHTML = pokemonList.split("1").length - 1;
+      document.getElementById('2count').innerHTML = pokemonList.split("2").length - 1;
+      document.getElementById('3count').innerHTML = pokemonList.split("3").length - 1;
+      document.getElementById('4count').innerHTML = pokemonList.split("4").length - 1;
+      document.getElementById('5count').innerHTML = pokemonList.split("5").length - 1;
+      document.getElementById('6count').innerHTML = pokemonList.split("6").length - 1;
+      document.getElementById('7count').innerHTML = pokemonList.split("7").length - 1;
+      document.getElementById('8count').innerHTML = pokemonList.split("8").length - 1;
+      document.getElementById('9count').innerHTML = pokemonList.split("9").length - 1;
     </script>
   </body>
 </html>
