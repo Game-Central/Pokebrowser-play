@@ -69,6 +69,10 @@ function spawnPoke() {
     };
   win.focus();
 }
+function closePoke() {
+  win.close();
+}
+window.addEventListener("beforeunload", closePoke);
 </script>
   </body>
 </html>
