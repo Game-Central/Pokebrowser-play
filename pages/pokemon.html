@@ -76,6 +76,7 @@ text-align: center;
                     "Enter Pokemon Name Below To Catch. \nWarning: The Name Must Be Perfectly Spelt And All Lower Case");
         if (catchAnswer == pokemonName) {
           alert('Pokemon Caught');
+          localStorage.setItem("pokemonList", localStorage.getItem("pokemonList") + " " + (new window.URL(window.location.href)).searchParams.get('pokemon'));
           close();
         } else {alert('Incorrect');};
       }
