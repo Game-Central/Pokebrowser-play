@@ -47,13 +47,13 @@ var spawnCountdown = null;
 function startCount() {
   const interval = setInterval(function() {
     spawnPoke()
- }, randomNumber(1000, 6000));
+ }, randomNumber(10000, 60000));
 }
 var win = null;
 function spawnPoke() {
   
-  var width  = '350px';
-  var height = '400px';
+  var width  = '400px';
+  var height = '500px';
   var left = Math.random() * (1000 - 1) + 1;
   var top = Math.random() * (300 - 1) + 1;
   var params = 'width='+width+', height='+height;
