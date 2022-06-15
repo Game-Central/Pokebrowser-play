@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+.grid-container { display: grid; grid-template-columns: auto auto auto auto auto auto; padding: 10px;grid-column-gap: 10px;grid-row-gap: 10px; } 
+.grid-item { background-color: grey; border: 1px solid rgba(0, 0, 0, 15); padding: 20px; font-size: 100%; text-align: center;}
+    </style>
+  </head>
+  <body>
+<button onclick="localStorage.removeItem(pokemonList)">Clear Pokemon</button>
+<div class="grid-container">
+  <div class="grid-item"><a id="1count"></a></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+    <script>
+      var pokemonList = localStorage.getItem("pokemonList");
+
+      document.getElementById('1count').innerHTML = pokemonList.split("1").length - 1;
+    </script>
+  </body>
+</html>
