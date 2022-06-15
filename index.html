@@ -62,42 +62,13 @@ function spawnPoke() {
   params += ', menubar=1';
   params += ', scrollbars=0';
   if ((win == null) || (win.closed == true)) {
-      win = window.open("",'a', params);
-      win.document.body.style.margin = "0";
-      win.document.body.style.height = "100vh";
-      if (win.document.body.contains(document.getElementById("iframe")) == false) {var iframe = win.document.createElement("iframe")};
-      var code = win.document.createElement('script');
-      code.innerHTML = "window.onscroll = () => { window.scroll(0, 0)}";
-      iframe.id = "iframe";
-      iframe.style.border = "none";
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
-      iframe.style.margin = "0";
-      iframe.src = "https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9);
-      win.document.body.appendChild(iframe);
-      win.document.body.appendChild(code);
+      win = window.open("https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9),'a', params);
   } else {
     win.close();
-    win = window.open("",'a', params);
-    win.document.body.style.margin = "0";
-    win.document.body.style.height = "100vh";
-    if (win.document.body.contains(document.getElementById("iframe")) == false) {var iframe = win.document.createElement("iframe")};
-    var code = win.document.createElement('script');
-    code.innerHTML = "window.onscroll = () => { window.scroll(0, 0)}; function close1() {parent.closePoke();}";
-    iframe.id = "iframe";
-    iframe.style.border = "none";
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.margin = "0";
-    iframe.src = "https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9);
-    win.document.body.appendChild(iframe);
-    win.document.body.appendChild(code);
+    win = window.open("https://play.pokebrowser.gq/pages/pokemon?pokemon=" + randomNumber(1, 9),'a', params);
     };
   win.focus();
 }
-  function closePoke() {
-    win.close();
-  }
 </script>
   </body>
 </html>
