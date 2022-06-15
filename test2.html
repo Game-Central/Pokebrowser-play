@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <a>Pokemon</a>
+    <br>
+    <a id="pokemon"></a>
+    <script>
+      function randomNumber(minimum, maximum){
+        return Math.round(Math.random() * (maximum - minimum) + minimum)
+      }
+      document.getElementById('pokemon').innerHTML = localStorage.getItem("pokemon");
+    </script>
+  </body>
+</html>
