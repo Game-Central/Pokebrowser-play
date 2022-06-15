@@ -2,16 +2,13 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <button onclick="go">Spawn</button>
-    <a>Pokemon</a>
     <br>
     <a id="pokemon"></a>
     <script>
       function randomNumber(minimum, maximum){
         return Math.round(Math.random() * (maximum - minimum) + minimum)
       }
-      localStorage.setItem("pokemon", localStorage.getItem("pokemon") + randomNumber(1, 9));
-      document.getElementById('pokemon').innerHTML = localStorage.getItem("pokemon");
+      localStorage.setItem("pokemon", localStorage.getItem("pokemon") + " " + randomNumber(1, 9));
     </script>
   </body>
 </html>
