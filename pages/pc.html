@@ -1,45 +1,71 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <style>
-.grid-container { display: grid; grid-template-columns: auto auto auto auto auto auto; padding: 10px;grid-column-gap: 10px;grid-row-gap: 10px; } 
-.grid-item { background-color: grey; border: 1px solid rgba(0, 0, 0, 15); padding: 20px; font-size: 100%; text-align: center;}
+.grid-container { display: grid; grid-template-columns: auto auto auto auto auto auto; padding: 10px;grid-column-gap: 1px;grid-row-gap: 10px; } 
+.grid-item { background-color: grey; border: 2px solid rgba(0, 0, 0, 15); padding: 10px; font-size: 20px; text-align: center; width: 190px;}
     </style>
   </head>
   <body>
 <button onclick="localStorage.removeItem(pokemonList)">Clear Pokemon</button>
 <div class="grid-container">
-  <div class="grid-item"><a id="1count"></a></div>
-  <div class="grid-item"><a id="2count"></a></div>
-  <div class="grid-item"><a id="3count"></a></div>
-  <div class="grid-item"><a id="4count"></a></div>
-  <div class="grid-item"><a id="5count"></a></div>
-  <div class="grid-item"><a id="6count"></a></div>
-  <div class="grid-item"><a id="7count"></a></div>
-  <div class="grid-item"><a id="8count"></a></div>
-  <div class="grid-item"><a id="9count"></a></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/1.png" width="150px"><br>
+    <a>Caught:</a><a id="1count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/2.png" width="150px"><br>
+    <a>Caught:</a><a id="2count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/3.png" width="150px"><br>
+    <a>Caught:</a><a id="3count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/4.png" width="150px"><br>
+    <a>Caught:</a><a id="4count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/5.png" width="150px"><br>
+    <a>Caught:</a><a id="5count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/6.png" width="150px"><br>
+    <a>Caught:</a><a id="6count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/7.png" width="150px"><br>
+    <a>Caught:</a><a id="7count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/8.png" width="150px"><br>
+    <a>Caught:</a><a id="8count">0</a>
+  </div>
+
+
+  <div class="grid-item">
+    <img src="https://play.pokebrowser.gq/images/pokemon/9.png" width="150px"><br>
+    <a>Caught:</a><a id="9count">0</a>
+  </div>
+
+
 </div>
     <script>
       var pokemonList = localStorage.getItem("pokemonList");
