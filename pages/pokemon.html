@@ -51,6 +51,30 @@ text-align: center;
         img.src = 'https://play.pokebrowser.gq/images/pokemon/' + pokemon + '.png';
       }
     </script>
+    <script>
+    var pokemonName = (new window.URL(window.location.href)).searchParams.get('pokemon');
+
+    pokemonName = pokemonName.replace("1", "bulbasaur");
+    pokemonName = pokemonName.replace("2", "ivysaur");
+    pokemonName = pokemonName.replace("3", "venusaur");
+    pokemonName = pokemonName.replace("4", "charmander");
+    pokemonName = pokemonName.replace("5", "charmeleon");
+    pokemonName = pokemonName.replace("6", "charizard");
+    pokemonName = pokemonName.replace("7", "squirtle");
+    pokemonName = pokemonName.replace("8", "wartortle");
+    pokemonName = pokemonName.replace("9", "blastoise");
+
+      function Catch() {
+        var catchAnswer = promt('Enter the pokemon's name to catch it\n\nPs: the answer must me all lowercase and correct spelling')
+        if (catchAnswer == pokemonName) {
+          alert('Pokemon Caught')
+        } else {alert('Incorrect')}
+      }
+      function Flee() {
+        Alert('You Fled Successfully');
+        window.close();
+      }
+    </script>
   </div>
   </body>
 </html>
