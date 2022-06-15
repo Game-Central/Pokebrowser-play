@@ -70,6 +70,7 @@ function spawnPoke() {
   win.focus();
 }
 function closePoke() {
+  var answer = promt("Are you sure you would like to leave?")
   win.close();
 }
 window.addEventListener("beforeunload", closePoke);
